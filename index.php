@@ -1,0 +1,252 @@
+<?php
+$page_title = 'DAVICI Market - Nur Abdulah';
+$active_page = 'home'; // For navigation highlighting
+
+session_start();
+
+$error = '';
+if (isset($_SESSION['login_error'])) {
+    $error = $_SESSION['login_error'];
+    unset($_SESSION['login_error']); // Hapus setelah ditampilkan
+}
+
+session_destroy();
+
+?>
+
+    <!DOCTYPE html>
+    <html lang="id">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><?php echo $page_title; ?></title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+
+    <body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <span>Gratis ongkir pembelian 1.000.000</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="header-links">
+                        <!-- <a href="#">Pencarian</a> -->
+                        <!-- <a href="#">Pengaturan</a> -->
+                        <a href="admin_login.php"><i class="fas fa-user"></i> Masuk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <h1>DAVICI</h1>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#hero" class="active">Halaman Utama</li>
+                            <li><a href="#categories">Penjualan</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 text-end">
+                    <!-- <div class="header-actions">
+                        <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+                        <a href="#" class="cart-btn"><i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">2</span></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Dozcel furniture 2020</span>
+                <h2 class="hero-title">Produk Baru<br />Koleksi Musim  Semi</h2>
+                <p class="hero-description">
+                    Temukan furniture kami dengan kualitas bagus
+                </p>
+                <button class="btn-hero"><a href="produk-habis.html" style="color: white; text-decoration:none">
+                    pembelian sekarang <i class="fas fa-arrow-right"></i>
+                </button></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/kursi bg.jpeg" alt="Spring Collection" />
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Berbelanja berdasarkan kategori</h2>
+                <div class="stats">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-text">Produk unik</span>
+                </div>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/sofas.jpeg" alt="Sofas" />
+                    </div>
+                    <h3>kursi</h3>
+                    <span class="product-count">32 products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/meja.jpeg" alt="Tables" />
+                    </div>
+                    <h3>Meja</h3>
+                    <span class="product-count">28 products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/living room.jpeg" alt="Living Room" />
+                    </div>
+                    <h3>Ruang Tamu</h3>
+                    <span class="product-count">67 products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/badroom.jpeg" alt="Bedroom" />
+                    </div>
+                    <h3>Kamar tidur</h3>
+                    <span class="product-count">54 products</span>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/diningroom.jpeg" alt="Dining Room" />
+                    </div>
+                    <h3>Ruang makan</h3>
+                    <span class="product-count">38 products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Tetap Update</h2>
+                <p>
+                    Berlangganan newsletter kami untuk mendapat produk terbaru dan penawaran eksklusif
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Masukkan alamat email anda" />
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-section">
+                        <div class="logo">DAVICI</div>
+                        <p>
+                            furnitur premiun dan dekorasi rumah untuk ruang tamu modern, kualitas pengerjaan terpadu
+                            dengan desain kontemporer
+                        </p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-section">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#">Ruang Tamu</a></li>
+                            <li><a href="#">Kamar Tidur</a></li>
+                            <li><a href="#">Ruang Makan</a></li>
+                            <!-- <li><a href="#">Office</a></li>
+                <li><a href="#">Outdoor</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-section">
+                        <h4>Perusahaan</h4>
+                        <ul>
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li><a href="#">karir</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Ketahanan</a></li>
+                            <li><a href="#">Afilasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Kontak Kami</a></li>
+                            <li><a href="#">Pengiriman</a></li>
+                            <li><a href="#">Pengembalian</a></li>
+                            <li><a href="#">Jaminan</a></li>
+                            <li><a href="#">Pertanyaan umum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-phone"></i>+62 857 5622 5977</li>
+                            <li><i class="fas fa-envelope"></i>pino@gmail.com</li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>Jl. Benteng, Kota Palopo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 Pino Jen. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
